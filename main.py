@@ -22,7 +22,7 @@ print(report)
 
 player = ("Jan Wouters")
 
-first_name = (player[0:3]); print(player.find("Jan"))
+first_name = (player[0:3]); (player.find("Jan")); print(first_name)
 
 last_name_len = (player.find("Wouters")); (player[4:]); print(len(player[4:]))
 
