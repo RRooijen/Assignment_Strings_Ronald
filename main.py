@@ -5,16 +5,14 @@ __human_name__ = 'strings'
 # Add your code after this line
 
 # Part 1
-score_goal_first = 'Ruud Gullit'
-score_goal_second = 'Marco van Basten'
-goal_0 = str(32)
-goal_1 = str(54)
+score_goal_first = 'Ruud Gullit '
+score_goal_second = 'Marco van Basten '
+goal_0 = 32
+goal_1 = 54
 
-scorers = score_goal_first + goal_0, score_goal_second + goal_1
+scorers = score_goal_first + str(goal_0) + ', ' + score_goal_second + str(goal_1)
 
-print(scorers)
-
-report = f'{score_goal_first} scored in the {goal_0}nd minute. \n{score_goal_second} scored in the {goal_1}th minute.'
+report = f'{score_goal_first}scored in the {str(goal_0)}nd minute\n{score_goal_second}scored in the {str(goal_1)}th minute'
 
 print(report)
 
@@ -22,12 +20,17 @@ print(report)
 
 player = ("Jan Wouters")
 
-first_name = (player[0:3]); (player.find("Jan")); print(first_name)
+first_name = player.split()[0]
+print(first_name)
 
-last_name_len = (player.find("Wouters")); (player[4:]); print(len(player[4:]))
+last_name_len = len(player.split()[-1])
+print(last_name_len)
 
-name_short = f'{player[:1]}. {player[4:]}'; print(name_short)
+name_short = f'{player[:1]}. {player.split()[-1]}' 
+print(name_short)
 
-chant = f'{first_name}! ' * 3; print(chant.strip(" "))
+chant = (len(first_name) * f'{first_name}! ').rstrip() 
+print(chant)
 
-good_chant = print(" " != chant)
+good_chant = (" " != chant)
+print(good_chant)
